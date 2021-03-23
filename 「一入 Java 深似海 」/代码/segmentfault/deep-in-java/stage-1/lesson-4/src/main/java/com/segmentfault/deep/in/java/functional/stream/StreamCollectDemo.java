@@ -18,5 +18,7 @@ public class StreamCollectDemo {
                 .collect(LinkedList::new, List::add, List::addAll);
 
         System.out.println(values.getClass());
+        System.out.println(values);
+
     }
 }
