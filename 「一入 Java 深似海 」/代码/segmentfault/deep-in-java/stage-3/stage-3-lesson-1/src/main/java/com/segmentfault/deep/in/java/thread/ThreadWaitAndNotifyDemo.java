@@ -21,13 +21,10 @@ public class ThreadWaitAndNotifyDemo {
         // Object.wait() 与 Thread.join() 看起来效果类似
         // 实际上 Thread.join() 方法就是调用了 Thread 对象 wait(int) 方法
 
-        // 调用 wait() 方法的对象，再调用 notify() 方法必须是同一对象
+        //
         // 因此以下调用时错误的示范
         Object monitor = ThreadWaitAndNotifyDemo.class;
-        synchronized (monitor) {
-//            t1.notify();
-//            t2.notify();
-        }
+        synchronized (monitor)
 
         // 正确的写法：
         synchronized (monitor) {
